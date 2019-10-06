@@ -1,0 +1,62 @@
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar.navbar-inverse {
+    background-image: linear-gradient(to bottom left, purple, rgb(4, 15, 175));
+    font-family: 'Squada One';
+}
+
+.navbar .navbar-brand {
+    font-size: 34px;
+    color: rgb(218, 206, 206);
+    padding-top: 5px;
+}
+
+.navbar .navbar-nav {
+    font-size: 19px;
+    color: rgb(218, 206, 206);
+}
+
+#firstjumb {
+    margin-top: 16%;
+    text-align: center;
+    font-family: 'Kalam';
+    color: rgb(218, 206, 206);
+    background-color: red;
+}
+
+#firstjumb h1 {
+    font-size: 45px;
+}
+
+.fab {
+    font-size: 28px;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-github-square {
+    color: rgb(212, 205, 205);
+}
+
+.fa-linkedin {
+    color: rgb(73, 155, 231);
+}
+
+.fa-youtube-square {
+    color: orangered;
+}
+
+.fa-exclamation-triangle {
+    padding: 15px;
+    border-radius: 20%;
+    background-color: rgb(34, 30, 30);
+    color: yellow;
+    font-size: 60px;
+}
