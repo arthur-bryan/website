@@ -14,10 +14,11 @@ body {
     font-size: 34px;
     color: rgb(218, 206, 206);
     padding-top: 5px;
+    font-family: 'Righteous';
 }
 
 .navbar .navbar-nav {
-    font-size: 19px;
+    font-size: 20px;
     color: rgb(218, 206, 206);
 }
 
@@ -48,6 +49,10 @@ p u {
 
 h3 {
     text-align: center;
+}
+
+.glyphicon-globe {
+    color: yellow;
 }
 
 .fab {

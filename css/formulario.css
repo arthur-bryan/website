@@ -14,10 +14,11 @@ body {
     font-size: 34px;
     color: rgb(218, 206, 206);
     padding-top: 5px;
+    font-family: 'Righteous';
 }
 
 .navbar .navbar-nav {
-    font-size: 19px;
+    font-size: 20px;
     color: rgb(218, 206, 206);
 }
 
@@ -31,6 +32,10 @@ body {
 
 #firstjumb h1 {
     font-size: 45px;
+}
+
+.glyphicon-globe {
+    color: yellow;
 }
 
 .fab {

@@ -14,10 +14,11 @@ body {
     font-size: 34px;
     color: rgb(218, 206, 206);
     padding-top: 5px;
+    font-family: 'Righteous';
 }
 
 .navbar .navbar-nav {
-    font-size: 19px;
+    font-size: 20px;
     color: rgb(218, 206, 206);
 }
 
@@ -26,7 +27,8 @@ body {
     text-align: center;
     font-family: 'Kalam';
     color: rgb(218, 206, 206);
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .4);
+    border: 12px solid rgba(139, 0, 139, .5);
 }
 
 #firstjumb h1 {
@@ -55,6 +57,10 @@ body {
 
 .fab {
     font-size: 28px;
+}
+
+.glyphicon-globe {
+    color: yellow;
 }
 
 .fab:hover {
