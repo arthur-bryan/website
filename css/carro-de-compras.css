@@ -26,11 +26,28 @@ body {
     text-align: center;
     font-family: 'Kalam';
     color: rgb(218, 206, 206);
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .4);
+    border: 12px solid rgba(139, 0, 139, .5);
 }
 
 #firstjumb h1 {
-    font-size: 45px;
+    font-size: 50px;
+}
+
+p u {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#texto {
+    background-color: rgba(0, 0, 0, .3);
+    text-align: left;
+    font-size: 35px;
+    font-family: 'Signika';
+}
+
+h3 {
+    text-align: center;
 }
 
 .fab {
