@@ -1,14 +1,12 @@
 # arthur-bryan/website 
-  Um site básico que teve seu desenvolvimento iniciado para que eu possa praticar
-  o que estou aprendendo nas aulas do curso de desenvolvimento web.
-  Nele mostrarei sobre meus projetos com Python.
+  A simple website developed when i was testing the things i learned when doing a web-developer course.
 
-# Desenvolvido em:
+# Developed in:
   HTML5 
   CSS3
-  JavaScript (interações da barra de navegação)
+  JavaScript (simple navbar iteractions)
   Bootstrap
   FontAwesome
   
-  # Autor
+  # Author
     Arthur Bryan
