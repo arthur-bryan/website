@@ -1,0 +1,168 @@
+@font-face{
+	font-family: 'Architects Daughter';
+	src: url('../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Signika';
+    src: url('../fonts/Signika/Signika-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Squada One';
+    src: url('../fonts/Squada_One/SquadaOne-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Kalam';
+    src: url('../fonts/Kalam/Kalam-Regular.ttf')  format('truetype');
+}
+
+
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar.navbar-inverse {
+    background-image: linear-gradient(to bottom left, purple, rgb(4, 15, 175));
+    font-family: 'Squada One', sans-serif;
+}
+
+.navbar .navbar-brand {
+    color: rgb(218, 206, 206);
+    font-size: 34px;
+    padding-top: 5px;
+}
+
+.navbar .navbar-nav {
+    font-size: 20px;
+    color: rgb(218, 206, 206);
+}
+
+#main_div {
+    margin-top: 16%;
+    text-align: center;
+    font-family: 'Kalam', sans-serif;
+    color: rgb(218, 206, 206);
+    font-size: 70px;
+}
+
+#jumb1 {
+    background-color: rgba(0, 0, 0, .4);
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+#jumb1 h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#jumb_icones {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 2%;
+    border: 4px solid rgb(128, 0, 128);
+}
+
+#jumb2 {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 5%;
+}
+
+#playvideo {
+    background-color: rgba(0, 0, 0, .6);
+    border: 4px solid rgb(128, 0, 128);
+}
+
+#mainjumb {
+    background-color: rgba(200, 200, 200, 1)
+}
+
+#mainjumb li {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: orange;
+}
+
+#jumb2 p {
+    font-family: 'Architects Daughter', sans-serif;
+    color: rgba(200, 200, 200, 1);
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.thumbnail {
+    background-color: rgba(0, 0, 0, .7);
+    border: 4px solid rgb(25, 25, 112);
+}
+
+.thumbnail p {
+    font-size: 30px;
+}
+
+.glyphicon-globe {
+    color: yellow;
+}
+
+.fab {
+    font-size: 28px;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-github-square {
+    color: rgb(212, 205, 205);
+}
+
+.fa-linkedin {
+    color: rgb(73, 155, 231);
+}
+
+.fa-youtube-square {
+    color: orangered;
+}
+
+.fa-python {
+    color: darkgray;
+    font-size: 50px;
+}
+
+.fa-linux {
+    color: darkgray;
+    font-size: 50px;
+}
+
+.fa-shield-alt {
+    color: darkgray;
+    font-size: 50px;
+}
+
+.fa-robot {
+    color: darkgray;
+    font-size: 50px;
+}
+
+.fa-wifi {
+    color: darkgray;
+    font-size: 50px;
+}
+
+.fa-exclamation-triangle {
+    padding: 15px;
+    border-radius: 20%;
+    background-color: rgb(34, 30, 30);
+    color: yellow;
+    font-size: 80px;
+}

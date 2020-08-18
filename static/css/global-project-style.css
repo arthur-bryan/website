@@ -1,0 +1,105 @@
+@font-face{
+    font-family: 'Architects Daughter';
+    src: url('../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Signika';
+    src: url('../fonts/Signika/Signika-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Squada One';
+    src: url('../fonts/Squada_One/SquadaOne-Regular.ttf')  format('truetype');
+}
+
+@font-face{
+    font-family: 'Kalam';
+    src: url('../fonts/Kalam/Kalam-Regular.ttf')  format('truetype');
+}
+
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar.navbar-inverse {
+    background-image: linear-gradient(to bottom left, purple, rgb(4, 15, 175));
+    font-family: 'Squada One', sans-serif;
+}
+
+.navbar .navbar-brand {
+    font-size: 34px;
+    color: rgb(218, 206, 206);
+    padding-top: 5px;
+}
+
+.navbar .navbar-nav {
+    font-size: 20px;
+    color: rgb(218, 206, 206);
+}
+
+#firstjumb {
+    margin-top: 16%;
+    text-align: center;
+    font-family: 'Kalam', sans-serif;
+    color: rgb(218, 206, 206);
+    margin-bottom: 10%;
+    background-color: rgba(0, 0, 0, .4);
+    border: 12px solid rgba(139, 0, 139, .5);
+}
+
+#firstjumb h1 {
+    font-size: 50px;
+}
+
+p u {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#texto {
+    background-color: rgba(0, 0, 0, .3);
+    text-align: left;
+    font-size: 35px;
+    font-family: 'Signika', sans-serif;
+}
+
+h3 {
+    text-align: center;
+}
+
+.glyphicon-globe {
+    color: yellow;
+}
+
+.fab {
+    font-size: 28px;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-github-square {
+    color: rgb(212, 205, 205);
+}
+
+.fa-linkedin {
+    color: rgb(73, 155, 231);
+}
+
+.fa-youtube-square {
+    color: orangered;
+}
+
+.fa-exclamation-triangle {
+    padding: 15px;
+    border-radius: 20%;
+    background-color: rgb(34, 30, 30);
+    color: yellow;
+    font-size: 60px;
+}
