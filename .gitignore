@@ -1,0 +1,9 @@
+.idea/
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+
+# Perfect template (example/demo content)
+content/blog/lorem-ipsum-perfect-template.md
+static/images/blog/lorem-ipsum/

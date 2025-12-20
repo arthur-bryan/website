@@ -1,0 +1,47 @@
+<div class="mermaid-container">
+  <div class="mermaid">
+{{ .Inner }}
+  </div>
+</div>
+
+{{ if not (.Page.Scratch.Get "mermaid-loaded") }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#22d3ee',
+      primaryTextColor: '#f5f5f5',
+      primaryBorderColor: '#2a2a2a',
+      lineColor: '#34d399',
+      secondaryColor: '#1e1e1e',
+      tertiaryColor: '#0d0d0d',
+      background: '#0d0d0d',
+      mainBkg: '#141414',
+      secondBkg: '#1e1e1e',
+      labelBackground: '#0d0d0d',
+      labelTextColor: '#f5f5f5',
+      nodeBorder: '#22d3ee',
+      clusterBkg: '#1e1e1e',
+      clusterBorder: '#2a2a2a',
+      defaultLinkColor: '#34d399',
+      titleColor: '#f5f5f5',
+      edgeLabelBackground: '#141414',
+      actorBorder: '#22d3ee',
+      actorBkg: '#141414',
+      actorTextColor: '#f5f5f5',
+      actorLineColor: '#34d399',
+      signalColor: '#f5f5f5',
+      signalTextColor: '#f5f5f5',
+      labelBoxBkgColor: '#141414',
+      labelBoxBorderColor: '#22d3ee',
+      loopTextColor: '#f5f5f5',
+      noteBorderColor: '#22d3ee',
+      noteBkgColor: '#1e1e1e',
+      noteTextColor: '#f5f5f5'
+    }
+  });
+</script>
+{{ .Page.Scratch.Set "mermaid-loaded" true }}
+{{ end }}

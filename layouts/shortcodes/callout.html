@@ -1,0 +1,102 @@
+{{ $type := .Get "type" | default "info" }}
+{{ $title := .Get "title" }}
+
+{{ $icon := "" }}
+{{ $color := "" }}
+
+{{ if eq $type "info" }}
+  {{ $icon = "ℹ️" }}
+  {{ $color = "var(--accent-primary)" }}
+{{ else if eq $type "warning" }}
+  {{ $icon = "⚠️" }}
+  {{ $color = "var(--accent-warning)" }}
+{{ else if eq $type "success" }}
+  {{ $icon = "✓" }}
+  {{ $color = "var(--accent-secondary)" }}
+{{ else if eq $type "tip" }}
+  {{ $icon = "💡" }}
+  {{ $color = "var(--accent-tertiary)" }}
+{{ else if eq $type "danger" }}
+  {{ $icon = "⛔" }}
+  {{ $color = "#ef4444" }}
+{{ end }}
+
+<div class="callout callout-{{ $type }}" role="alert" style="--callout-color: {{ $color }}">
+  <div class="callout-header">
+    <span class="callout-icon">{{ $icon }}</span>
+    {{ if $title }}
+    <strong class="callout-title">{{ $title }}</strong>
+    {{ else }}
+    <strong class="callout-title">{{ upper $type }}</strong>
+    {{ end }}
+  </div>
+  <div class="callout-body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+
+{{ if not (.Page.Scratch.Get "callout-styles-loaded") }}
+<style>
+  .callout {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--callout-color);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+  }
+
+  .callout-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .callout-title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--callout-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .callout-body {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  .callout-body p {
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .callout-body code {
+    background: var(--bg-tertiary);
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  .callout-body ul,
+  .callout-body ol {
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .callout-body li {
+    margin-bottom: var(--space-xs);
+  }
+</style>
+{{ .Page.Scratch.Set "callout-styles-loaded" true }}
+{{ end }}

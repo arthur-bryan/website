@@ -1,0 +1,111 @@
+{{ $id := .Get "id" | default "carousel" }}
+{{ $imagesParam := .Get "images" }}
+{{ $images := split $imagesParam "," }}
+
+<div class="swiper {{ $id }}" id="{{ $id }}">
+  <div class="swiper-wrapper">
+    {{ range $images }}
+    {{ $imagePath := trim . " " }}
+    <div class="swiper-slide">
+      <img src="{{ $imagePath }}" alt="Screenshot" loading="lazy">
+    </div>
+    {{ end }}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+{{ if not (.Page.Scratch.Get "swiper-loaded") }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+  .swiper {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-card);
+    margin: var(--space-lg) 0;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--accent-primary);
+    background: rgba(13, 13, 13, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .swiper-pagination-bullet {
+    background: var(--border);
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--accent-primary);
+  }
+
+  @media (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 32px;
+      height: 32px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('#{{ $id }}', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: {
+        enabled: true,
+      },
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+      }
+    });
+  });
+</script>
+{{ .Page.Scratch.Set "swiper-loaded" true }}
+{{ end }}
